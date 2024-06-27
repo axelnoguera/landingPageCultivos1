@@ -3,6 +3,10 @@ padding:0;
 margin:0;
 }
 
+:root{
+--colorInputs:#fff;
+}
+
 body{
 font-size:20px;
 }
@@ -106,6 +110,7 @@ object-fit:cover;
 max-width:30vw;
 font-size:1.1rem;
 color:#fff;
+text-align:justify;
 }
 
 .contenedor2 strong{
@@ -125,27 +130,87 @@ text-decoration:none;
 margin-bottom:1rem;
 }
 
+.contenedor3{
+height:30rem;
+width:100%;
+display:grid;
+place-content:center;
+}
+
+form{
+height:20rem;
+width:40rem;
+background:rgba(250,250,250,30%);
+display:grid;
+}
+
+form b{
+font-size:1.2rem;
+color:#000;
+margin-left:5%;
+align-self:center;
+font-family:sans-serif;
+}
+
+form input{
+height:2rem;
+width:90%;
+justify-self:center;
+align-self:center;
+background:transparent;
+border:none;
+border-bottom:.1rem solid var(--colorInputs);
+color:#ededed;
+outline:none;
+}
+
+::placeholder{
+color:var(--colorInputs);
+font-family:sans-serif;
+}
+
+form textarea{
+height:5rem;
+width:90%;
+justify-self:center;
+align-self:center;
+background:transparent;
+border:none;
+border-bottom:.1rem solid var(--colorInputs);
+color:#ededed;
+outline:none;
+}
+
+form input:hover, textarea:hover{
+background:rgba(200,200,200, 20%);
+}
+
+input:is([type="submit"]) {
+background:rgba(200,200,200, 20%);
+border:none;
+}
+
 footer{
-    height:15vh;
-    width:100vw;
-    background:#000;
-    display:grid;
-    grid-template-columns:auto auto;
-    place-content:center;
-    gap:.4rem;
-    }
+height:10rem;
+width:100vw;
+background:#000;
+display:grid;
+grid-template-columns:auto auto;
+place-content:center;
+gap:.4rem;
+}
     
-    footer img{
-    height:1rem;
-    width:1rem;
-    filter:invert(100%);
-    align-self:center;
-    }
+footer img{
+height:1rem;
+width:1rem;
+filter:invert(100%);
+align-self:center;
+}
     
-    footer a{
-    color:#fff;
-    text-decoration:none;
-    }
+footer a{
+color:#fff;
+text-decoration:none;
+}
 
 @media screen and (max-width:390px){
     header b{
@@ -153,23 +218,22 @@ footer{
     }
  
     nav a{
-        font-size:.6em;  
+    font-size:.6em;  
     }
  
     .contenedor p{
-        font-size:.6em;
+    font-size:.6em;
     }
  
-    .contenedor2 p{
-    
+    .contenedor2 p{  
     width:100%;
     }
 }
 
 
-@media screen and (max-width:650px){
+@media screen and (max-width:670px){
    .background img{
-       object-fit:cover;
+   object-fit:cover;
    }
 
    header b{
@@ -177,11 +241,11 @@ footer{
    }
 
    nav a{
-       font-size:.9em;  
+   font-size:.9em;  
    }
 
    .contenedor p{
-       font-size:.9em;
+   font-size:.9em;
    }
 
    .contenedor2{
@@ -198,5 +262,14 @@ footer{
 
    .texto{
    font-size:1rem;
+   }
+
+   form b{
+   font-size:1rem;
+   }
+
+   form{
+   height:16rem;
+   width:22rem;
    }
 }
